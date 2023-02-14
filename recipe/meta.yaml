@@ -10,7 +10,7 @@ source:
   sha256: 5913e0a4ca29a097baad1b78a4674963bc7a06e39ff63df3c73fbad6fadb34e1
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('muparserx', max_pin='x.x') }}
@@ -33,7 +33,7 @@ test:
 about:
   home: https://beltoforion.de/en/muparserx
   license: BSD-2-Clause
-  license_file: License.txt
+  license_file: LICENSE
   summary: A C++ Library for Parsing Expressions with Strings, Complex Numbers, Vectors, Matrices and more.
 
 extra:
