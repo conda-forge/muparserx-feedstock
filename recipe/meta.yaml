@@ -33,7 +33,7 @@ test:
 about:
   home: https://beltoforion.de/en/muparserx
   license: BSD-2-Clause
-  license_file: License.txt
+  license_file: LICENSE
   summary: A C++ Library for Parsing Expressions with Strings, Complex Numbers, Vectors, Matrices and more.
 
 extra:
