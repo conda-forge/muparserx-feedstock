@@ -1,5 +1,5 @@
 {% set name = "muparserx" %}
-{% set version = "4.0.8" %}
+{% set version = "4.0.11" %}
 
 package:
   name: muparserx
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/beltoforion/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5913e0a4ca29a097baad1b78a4674963bc7a06e39ff63df3c73fbad6fadb34e1
+  sha256: 8bc2773f174afd8c51cc480a293622c499fd1f46ecfa57296e59d86c75356977
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('muparserx', max_pin='x.x') }}
 
