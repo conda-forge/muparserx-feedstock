@@ -1,5 +1,5 @@
 {% set name = "muparserx" %}
-{% set version = "4.0.11" %}
+{% set version = "4.0.12" %}
 
 package:
   name: muparserx
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/beltoforion/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8bc2773f174afd8c51cc480a293622c499fd1f46ecfa57296e59d86c75356977
+  sha256: 941c79f9b8b924f2f22406af8587177b4b185da3c968dbe8dc371b9dbe117f6e
 
 build:
   number: 0
