@@ -17,17 +17,22 @@ build:
 requirements:
   build:
     - cmake
-    - make
+    - make  # [unix]
     - {{ compiler('cxx') }}
   host:
     - llvm-openmp  # [osx]
 test:
   commands:
-    - test -f ${PREFIX}/include/muparserx/mpParser.h
-    - test -f ${PREFIX}/lib/libmuparserx${SHLIB_EXT}
-    - test -f ${PREFIX}/lib/pkgconfig/muparserx.pc
-    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfigVersion.cmake
-    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfig.cmake
+    - test -f ${PREFIX}/include/muparserx/mpParser.h  # [unix]
+    - test -f ${PREFIX}/lib/libmuparserx${SHLIB_EXT}  # [unix]
+    - test -f ${PREFIX}/lib/pkgconfig/muparserx.pc  # [unix]
+    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfigVersion.cmake  # [unix]
+    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfig.cmake  # [unix]
+    - if not exist %PREFIX%\\Library\\include\\muparserx\\mpParser.h exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\libmuparserx\\muparser.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\bin\\muparser.dll exit 1  # [win]
+    - if not exist ${PREFIX}\\Library\\share\\cmake\\muparserx\\uparserxConfigVersion.cmake exit 1  # [win]
+    - if not exist ${PREFIX}\\Library\\share\\cmake\\muparserx\\muparserxConfig.cmake exit 1  # [win]
 
 about:
   home: https://beltoforion.de/en/muparserx
