@@ -30,8 +30,8 @@ test:
     - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfig.cmake  # [unix]
     - if not exist %PREFIX%\\Library\\include\\muparserx\\mpParser.h exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\muparserx.lib exit 1  # [win]
-    - if not exist ${PREFIX}\\Library\\cmake\\muparserxConfigVersion.cmake exit 1  # [win]
-    - if not exist ${PREFIX}\\Library\\cmake\\muparserxConfig.cmake exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\cmake\\muparserxConfigVersion.cmake exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\cmake\\muparserxConfig.cmake exit 1  # [win]
 
 about:
   home: https://beltoforion.de/en/muparserx
