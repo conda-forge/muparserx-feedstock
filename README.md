@@ -1,11 +1,11 @@
-About muparserx
-===============
+About muparserx-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/muparserx-feedstock/blob/main/LICENSE.txt)
 
 Home: https://beltoforion.de/en/muparserx
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/muparserx-feedstock/blob/main/LICENSE.txt)
 
 Summary: A C++ Library for Parsing Expressions with Strings, Complex Numbers, Vectors, Matrices and more.
 
@@ -38,6 +38,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18697&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/muparserx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18697&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/muparserx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
