@@ -10,7 +10,7 @@ source:
   sha256: 941c79f9b8b924f2f22406af8587177b4b185da3c968dbe8dc371b9dbe117f6e
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('muparserx', max_pin='x.x') }}
 
