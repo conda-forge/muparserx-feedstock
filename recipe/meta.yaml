@@ -10,25 +10,30 @@ source:
   sha256: 5913e0a4ca29a097baad1b78a4674963bc7a06e39ff63df3c73fbad6fadb34e1
 
 build:
-  number: 0
-  skip: True  # [win]
+  number: 1
   run_exports:
     - {{ pin_subpackage('muparserx', max_pin='x.x') }}
 
 requirements:
   build:
     - cmake
-    - make
+    - make  # [unix]
     - {{ compiler('cxx') }}
   host:
     - llvm-openmp  # [osx]
 test:
   commands:
-    - test -f ${PREFIX}/include/muparserx/mpParser.h
-    - test -f ${PREFIX}/lib/libmuparserx${SHLIB_EXT}
-    - test -f ${PREFIX}/lib/pkgconfig/muparserx.pc
-    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfigVersion.cmake
-    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfig.cmake
+    - test -f ${PREFIX}/include/muparserx/mpParser.h  # [unix]
+    - test -f ${PREFIX}/lib/libmuparserx${SHLIB_EXT}  # [unix]
+    - test -f ${PREFIX}/lib/pkgconfig/muparserx.pc  # [unix]
+    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfigVersion.cmake  # [unix]
+    - test -f ${PREFIX}/share/cmake/muparserx/muparserxConfig.cmake  # [unix]
+    - if not exist %PREFIX%\\Library\\include\\muparserx\\mpParser.h exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\muparserx.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\cmake\\muparserxConfigVersion.cmake exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\cmake\\muparserxConfig.cmake exit 1  # [win]
+
+
 
 about:
   home: https://beltoforion.de/en/muparserx
