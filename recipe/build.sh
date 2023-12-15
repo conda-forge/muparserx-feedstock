@@ -2,7 +2,7 @@
 
 mkdir build_ && cd build_
 
-cmake \
+cmake ${CMAKE_ARGS} \
   -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_INSTALL_LIBDIR=lib \
   -DCMAKE_PREFIX_PATH=${PREFIX} \
   -DBUILD_SHARED_LIBS=ON \
